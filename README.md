@@ -1,8 +1,6 @@
-# React + Vite
+### How To Run The Website?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Make sure to have Node.js installed in your PC.
+2. Clone the repository.
+3. Install the node dependencies by running "npm i" or "bun i".
+4. Run the local server by open to your terminal and command "npm run dev" or "bun run dev".
