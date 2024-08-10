@@ -48,7 +48,7 @@ function App() {
       {/* Navbar */}
       <div
         id="navbar"
-        className={`fixed top-0 w-full text-white flex justify-between items-center py-[1rem] px-[6rem] z-50 ${
+        className={`fixed top-0 w-full text-white flex justify-between items-center py-[1rem] px-[1rem] lg:px-[6rem] z-50 ${
           isScrolled ? "bg-black" : "bg-transparent"
         }`}
       >
@@ -103,14 +103,14 @@ function App() {
       {/* Banner */}
       <div
         id="banner"
-        className="banner grid grid-cols-12 w-full h-screen text-white"
+        className="banner grid grid-cols-12 w-full h-[70vh] lg:h-screen text-left text-white"
       >
-        <div id="cta" className="col-span-12 w-[75%] m-auto">
-          <div className="space-y-8">
+        <div id="cta" className="col-span-12 w-[90%] lg:w-[75%] m-auto">
+          <div className="space-y-6 lg:space-y-8">
             <h1 className="h1 font-playfair-display">
               Luxurious Beachfront <br /> Villas & Resorts
             </h1>
-            <p className="w-1/2 font-light">
+            <p className="w-4/5 md:m-0 md:w-1/2 font-light">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud.
@@ -123,28 +123,28 @@ function App() {
       {/* Description */}
       <div
         id="desc"
-        className="relative grid grid-cols-12 w-full py-[3.75rem] overflow-hidden bg-[#F6F6F6]"
+        className="relative grid grid-cols-12 w-full py-[1rem] md:py-[3.75rem] overflow-hidden bg-[#F6F6F6]"
       >
-        <div className="col-span-12 w-[75%] mx-auto">
+        <div className="col-span-12 w-[90%] lg:w-[75%] mx-auto z-10">
           <h2 className="h2">The Finest of Bali and Beyond</h2>
-          <p className="w-2/3 mt-6">
+          <p className="w-[90%] mt-4 lg:w-2/3 lg:mt-6">
             Discover the most luxurious to the most authentic experiences living
             in the Island of Gods, Bali, in just one simple click. We take our
             time to cherry-picked only the most majestic villas, hotels,
             resorts, yachts, exclusive transports, activities, and entertainment
             in Bali and Beyond.
           </p>
-          <img
-            src={tree}
-            alt="tree.png"
-            className="w-[22%] absolute top-4 right-0"
-          />
         </div>
+        <img
+          src={tree}
+          alt="tree.png"
+          className="w-[90%] lg:w-[22%] absolute top-4 right-0 z-0"
+        />
       </div>
 
       {/* Discover */}
       <div id="discover" className="grid grid-cols-12 py-[3.75rem]">
-        <div className="col-span-12 w-[75%] m-auto text-center">
+        <div className="col-span-12 w-[90%] lg:w-[75%] m-auto text-center">
           <h2 className="h2 font-playfair-display">
             The Luxury Bali Experience
           </h2>
@@ -156,7 +156,7 @@ function App() {
           </p>
           <div
             id="images"
-            className="mt-14 grid gap-4 text-white text-left sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
+            className="mt-14 grid gap-4 text-white text-left grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
           >
             {villas.map((villa, index) => (
               <div key={index} className="relative">
@@ -203,9 +203,9 @@ function App() {
 
       {/* Social Media */}
       <div id="social-media" className="grid grid-cols-12 py-[3.75rem]">
-        <div className="col-span-12 w-[75%] m-auto">
+        <div className="col-span-12 w-4/5 lg:w-[75%] m-auto">
           <h2 className="h2 font-playfair-display">INSTAGRAM</h2>
-          <p className="w-[60%] mt-6">
+          <p className="w-full lg:w-[60%] mt-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
@@ -221,20 +221,20 @@ function App() {
         <img
           src={statue}
           alt="image.png"
-          className="object-cover bg-no-repeat w-full h-auto"
+          className="object-cover bg-no-repeat w-full h-[30vh] lg:h-auto"
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-y-[7.75rem] w-[60%] mx-auto">
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-y-[2rem] lg:gap-y-[7.75rem] w-[60%] mx-auto">
           <div className="text-center">
             <h2 className="h2 font-playfair-display">Bali Paradise Awaits</h2>
             <p className="mt-4">Receive latest updates from us.</p>
           </div>
-          <div className="flex gap-x-11 w-full h-11">
+          <div className="flex gap-x-4 lg:gap-x-11 w-full h-11">
             <input
               type="text"
               placeholder="Enter your email address"
-              className="w-full text-black outline-none px-8 py-2"
+              className="w-full text-black outline-none px-4 py-1 lg:px-8 lg:py-2"
             />
-            <button className="bg-black tracking-[.5rem] px-6 py-2">
+            <button className="bg-black tracking-[.5rem] px-3 py-1 lg:px-6 lg:py-2">
               Submit
             </button>
           </div>
@@ -250,56 +250,56 @@ function App() {
             className="bg-cover bg-no-repeat mx-auto md:mx-0 md:w-full"
           />
         </div>
-        <div className="col-span-12 md:col-span-8 flex justify-around text-left bg-black py-5 p-4 md:pt-16">
-          <div>
-            <h3 className="h3 font-playfair-display tracking-widest">Contact Us</h3>
-            <div className="flex flex-col justify-center gap-y-2 mt-5">
-              <div className="flex items-center gap-x-5">
-                <small className="icon">T:</small>
-                <p>+62 81 123 4558432</p>
-              </div>
-              <div className="flex items-center gap-x-5">
-                <small className="icon">E:</small>
-                <p className="underline">info@baliluxuryleisure.com</p>
-              </div>
-              <div className="flex items-center gap-x-5">
-                <small className="icon">
-                  <svg
-                    width="13"
-                    height="12"
-                    viewBox="0 0 13 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M4.0435 0.0772539C4.67888 0.0480039 4.88146 0.0415039 6.49996 0.0415039C8.11846 0.0415039 8.32104 0.0485456 8.95588 0.0772539C9.59071 0.105962 10.024 0.207254 10.4032 0.354046C10.8003 0.504087 11.1605 0.738629 11.4584 1.04196C11.7617 1.33934 11.9957 1.699 12.1452 2.09659C12.2925 2.47575 12.3933 2.90909 12.4225 3.54284C12.4518 4.1793 12.4583 4.38188 12.4583 5.99984C12.4583 7.61834 12.4513 7.82092 12.4225 8.4563C12.3938 9.09005 12.2925 9.52338 12.1452 9.90255C11.9957 10.3002 11.7613 10.6604 11.4584 10.9583C11.1605 11.2616 10.8003 11.4956 10.4032 11.6451C10.024 11.7924 9.59071 11.8932 8.95696 11.9224C8.32104 11.9517 8.11846 11.9582 6.49996 11.9582C4.88146 11.9582 4.67888 11.9511 4.0435 11.9224C3.40975 11.8937 2.97642 11.7924 2.59725 11.6451C2.19962 11.4956 1.83936 11.2612 1.54154 10.9583C1.23842 10.6607 1.00384 10.3006 0.854168 9.90309C0.707376 9.52392 0.606626 9.09059 0.577376 8.45684C0.548126 7.82038 0.541626 7.6178 0.541626 5.99984C0.541626 4.38134 0.548668 4.17875 0.577376 3.54392C0.606084 2.90909 0.707376 2.47575 0.854168 2.09659C1.00406 1.69905 1.23882 1.33897 1.54208 1.04142C1.83948 0.738359 2.19938 0.503786 2.59671 0.354046C2.97588 0.207254 3.40921 0.106504 4.04296 0.0772539H4.0435ZM8.90767 1.14975C8.27933 1.12105 8.09083 1.11509 6.49996 1.11509C4.90908 1.11509 4.72058 1.12105 4.09225 1.14975C3.51104 1.1763 3.19579 1.27325 2.98563 1.35505C2.70775 1.46338 2.50896 1.59175 2.30042 1.8003C2.10273 1.99262 1.9506 2.22674 1.85517 2.4855C1.77338 2.69567 1.67642 3.01092 1.64988 3.59213C1.62117 4.22046 1.61521 4.40896 1.61521 5.99984C1.61521 7.59071 1.62117 7.77921 1.64988 8.40755C1.67642 8.98875 1.77338 9.304 1.85517 9.51417C1.9505 9.77255 2.10271 10.0071 2.30042 10.1994C2.49271 10.3971 2.72725 10.5493 2.98563 10.6446C3.19579 10.7264 3.51104 10.8234 4.09225 10.8499C4.72058 10.8786 4.90854 10.8846 6.49996 10.8846C8.09138 10.8846 8.27933 10.8786 8.90767 10.8499C9.48888 10.8234 9.80413 10.7264 10.0143 10.6446C10.2922 10.5363 10.491 10.4079 10.6995 10.1994C10.8972 10.0071 11.0494 9.77255 11.1448 9.51417C11.2265 9.304 11.3235 8.98875 11.35 8.40755C11.3788 7.77921 11.3847 7.59071 11.3847 5.99984C11.3847 4.40896 11.3788 4.22046 11.35 3.59213C11.3235 3.01092 11.2265 2.69567 11.1448 2.4855C11.0364 2.20763 10.908 2.00884 10.6995 1.8003C10.5072 1.60263 10.273 1.45049 10.0143 1.35505C9.80413 1.27325 9.48888 1.1763 8.90767 1.14975ZM5.73892 7.83663C6.16394 8.01355 6.63721 8.03743 7.07788 7.90419C7.51855 7.77094 7.8993 7.48883 8.15508 7.10605C8.41087 6.72327 8.52582 6.26356 8.48032 5.80544C8.43481 5.34731 8.23167 4.9192 7.90558 4.59421C7.69771 4.38647 7.44637 4.2274 7.16964 4.12846C6.89291 4.02952 6.59769 3.99316 6.30523 4.022C6.01276 4.05085 5.73033 4.14418 5.47827 4.29528C5.22621 4.44638 5.01078 4.65149 4.8475 4.89584C4.68422 5.14019 4.57715 5.4177 4.53399 5.7084C4.49083 5.9991 4.51267 6.29575 4.59792 6.57699C4.68317 6.85824 4.82972 7.11708 5.02702 7.3349C5.22431 7.55271 5.46745 7.72406 5.73892 7.83663ZM4.33438 3.83425C4.61876 3.54987 4.95638 3.32428 5.32795 3.17037C5.69953 3.01646 6.09777 2.93724 6.49996 2.93724C6.90215 2.93724 7.30039 3.01646 7.67196 3.17037C8.04354 3.32428 8.38115 3.54987 8.66554 3.83425C8.94993 4.11864 9.17552 4.45626 9.32943 4.82783C9.48334 5.1994 9.56256 5.59765 9.56256 5.99984C9.56256 6.40202 9.48334 6.80027 9.32943 7.17184C9.17552 7.54341 8.94993 7.88103 8.66554 8.16542C8.09119 8.73977 7.31221 9.06244 6.49996 9.06244C5.68771 9.06244 4.90872 8.73977 4.33438 8.16542C3.76003 7.59107 3.43736 6.81209 3.43736 5.99984C3.43736 5.18759 3.76003 4.4086 4.33438 3.83425ZM10.2418 3.39334C10.3123 3.32686 10.3687 3.24691 10.4077 3.15824C10.4467 3.06957 10.4676 2.97396 10.469 2.87709C10.4704 2.78022 10.4524 2.68405 10.4159 2.59428C10.3795 2.5045 10.3254 2.42295 10.2569 2.35444C10.1884 2.28594 10.1069 2.23187 10.0171 2.19545C9.92733 2.15903 9.83116 2.14099 9.73429 2.1424C9.63742 2.14382 9.54181 2.16465 9.45314 2.20367C9.36447 2.2427 9.28452 2.29911 9.21804 2.36959C9.08875 2.50664 9.01797 2.68869 9.02071 2.87709C9.02346 3.06549 9.09952 3.2454 9.23275 3.37863C9.36598 3.51186 9.54589 3.58792 9.73429 3.59067C9.92269 3.59341 10.1047 3.52263 10.2418 3.39334Z"
-                      fill="white"
-                    />
-                  </svg>
-                </small>
-                <p className="underline">baliluxuryleisure</p>
-              </div>
-              <p className="mt-32">
-                2022 Bali Luxury Leisure Design by Incognito.Asia
-              </p>
-            </div>
+        <div className="col-span-12 md:col-span-8 grid text-left bg-black py-5 p-4 md:pt-16 gap-x-4 gap-y-10">
+          <h3 className="col-span-12 h3 font-playfair-display tracking-widest">
+            Contact Us
+          </h3>
+          <div className="col-span-12 md:col-span-4">
+            <p className="flex items-center gap-x-5">
+              <span className="icon">T:</span>
+              <span>+62 81 123 4558432</span>
+            </p>
+            <p className="flex items-center gap-x-5">
+              <span className="icon">E:</span>
+              <a className="underline">info@baliluxuryleisure.com</a>
+            </p>
+            <p className="flex items-center gap-x-5">
+              <span className="icon">
+                <svg
+                  width="13"
+                  height="12"
+                  viewBox="0 0 13 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M4.0435 0.0772539C4.67888 0.0480039 4.88146 0.0415039 6.49996 0.0415039C8.11846 0.0415039 8.32104 0.0485456 8.95588 0.0772539C9.59071 0.105962 10.024 0.207254 10.4032 0.354046C10.8003 0.504087 11.1605 0.738629 11.4584 1.04196C11.7617 1.33934 11.9957 1.699 12.1452 2.09659C12.2925 2.47575 12.3933 2.90909 12.4225 3.54284C12.4518 4.1793 12.4583 4.38188 12.4583 5.99984C12.4583 7.61834 12.4513 7.82092 12.4225 8.4563C12.3938 9.09005 12.2925 9.52338 12.1452 9.90255C11.9957 10.3002 11.7613 10.6604 11.4584 10.9583C11.1605 11.2616 10.8003 11.4956 10.4032 11.6451C10.024 11.7924 9.59071 11.8932 8.95696 11.9224C8.32104 11.9517 8.11846 11.9582 6.49996 11.9582C4.88146 11.9582 4.67888 11.9511 4.0435 11.9224C3.40975 11.8937 2.97642 11.7924 2.59725 11.6451C2.19962 11.4956 1.83936 11.2612 1.54154 10.9583C1.23842 10.6607 1.00384 10.3006 0.854168 9.90309C0.707376 9.52392 0.606626 9.09059 0.577376 8.45684C0.548126 7.82038 0.541626 7.6178 0.541626 5.99984C0.541626 4.38134 0.548668 4.17875 0.577376 3.54392C0.606084 2.90909 0.707376 2.47575 0.854168 2.09659C1.00406 1.69905 1.23882 1.33897 1.54208 1.04142C1.83948 0.738359 2.19938 0.503786 2.59671 0.354046C2.97588 0.207254 3.40921 0.106504 4.04296 0.0772539H4.0435ZM8.90767 1.14975C8.27933 1.12105 8.09083 1.11509 6.49996 1.11509C4.90908 1.11509 4.72058 1.12105 4.09225 1.14975C3.51104 1.1763 3.19579 1.27325 2.98563 1.35505C2.70775 1.46338 2.50896 1.59175 2.30042 1.8003C2.10273 1.99262 1.9506 2.22674 1.85517 2.4855C1.77338 2.69567 1.67642 3.01092 1.64988 3.59213C1.62117 4.22046 1.61521 4.40896 1.61521 5.99984C1.61521 7.59071 1.62117 7.77921 1.64988 8.40755C1.67642 8.98875 1.77338 9.304 1.85517 9.51417C1.9505 9.77255 2.10271 10.0071 2.30042 10.1994C2.49271 10.3971 2.72725 10.5493 2.98563 10.6446C3.19579 10.7264 3.51104 10.8234 4.09225 10.8499C4.72058 10.8786 4.90854 10.8846 6.49996 10.8846C8.09138 10.8846 8.27933 10.8786 8.90767 10.8499C9.48888 10.8234 9.80413 10.7264 10.0143 10.6446C10.2922 10.5363 10.491 10.4079 10.6995 10.1994C10.8972 10.0071 11.0494 9.77255 11.1448 9.51417C11.2265 9.304 11.3235 8.98875 11.35 8.40755C11.3788 7.77921 11.3847 7.59071 11.3847 5.99984C11.3847 4.40896 11.3788 4.22046 11.35 3.59213C11.3235 3.01092 11.2265 2.69567 11.1448 2.4855C11.0364 2.20763 10.908 2.00884 10.6995 1.8003C10.5072 1.60263 10.273 1.45049 10.0143 1.35505C9.80413 1.27325 9.48888 1.1763 8.90767 1.14975ZM5.73892 7.83663C6.16394 8.01355 6.63721 8.03743 7.07788 7.90419C7.51855 7.77094 7.8993 7.48883 8.15508 7.10605C8.41087 6.72327 8.52582 6.26356 8.48032 5.80544C8.43481 5.34731 8.23167 4.9192 7.90558 4.59421C7.69771 4.38647 7.44637 4.2274 7.16964 4.12846C6.89291 4.02952 6.59769 3.99316 6.30523 4.022C6.01276 4.05085 5.73033 4.14418 5.47827 4.29528C5.22621 4.44638 5.01078 4.65149 4.8475 4.89584C4.68422 5.14019 4.57715 5.4177 4.53399 5.7084C4.49083 5.9991 4.51267 6.29575 4.59792 6.57699C4.68317 6.85824 4.82972 7.11708 5.02702 7.3349C5.22431 7.55271 5.46745 7.72406 5.73892 7.83663ZM4.33438 3.83425C4.61876 3.54987 4.95638 3.32428 5.32795 3.17037C5.69953 3.01646 6.09777 2.93724 6.49996 2.93724C6.90215 2.93724 7.30039 3.01646 7.67196 3.17037C8.04354 3.32428 8.38115 3.54987 8.66554 3.83425C8.94993 4.11864 9.17552 4.45626 9.32943 4.82783C9.48334 5.1994 9.56256 5.59765 9.56256 5.99984C9.56256 6.40202 9.48334 6.80027 9.32943 7.17184C9.17552 7.54341 8.94993 7.88103 8.66554 8.16542C8.09119 8.73977 7.31221 9.06244 6.49996 9.06244C5.68771 9.06244 4.90872 8.73977 4.33438 8.16542C3.76003 7.59107 3.43736 6.81209 3.43736 5.99984C3.43736 5.18759 3.76003 4.4086 4.33438 3.83425ZM10.2418 3.39334C10.3123 3.32686 10.3687 3.24691 10.4077 3.15824C10.4467 3.06957 10.4676 2.97396 10.469 2.87709C10.4704 2.78022 10.4524 2.68405 10.4159 2.59428C10.3795 2.5045 10.3254 2.42295 10.2569 2.35444C10.1884 2.28594 10.1069 2.23187 10.0171 2.19545C9.92733 2.15903 9.83116 2.14099 9.73429 2.1424C9.63742 2.14382 9.54181 2.16465 9.45314 2.20367C9.36447 2.2427 9.28452 2.29911 9.21804 2.36959C9.08875 2.50664 9.01797 2.68869 9.02071 2.87709C9.02346 3.06549 9.09952 3.2454 9.23275 3.37863C9.36598 3.51186 9.54589 3.58792 9.73429 3.59067C9.92269 3.59341 10.1047 3.52263 10.2418 3.39334Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+              <a className="underline">baliluxuryleisure</a>
+            </p>
           </div>
-          <div className="flex flex-col gap-y-2">
-            <span>About</span>
-            <span>Experiences</span>
-            <span>Contact</span>
-            <span>Privacy</span>
-            <span>Career</span>
+          <div className="col-span-6 md:col-span-4">
+            <p>About</p>
+            <p>Experiences</p>
+            <p>Contact</p>
+            <p>Privacy</p>
+            <p>Career</p>
           </div>
-          <div className="flex flex-col gap-y-2">
-            <span>Lorem</span>
-            <span>Lorem</span>
-            <span>Lorem</span>
-            <span>Lorem</span>
-            <span>Lorem</span>
+          <div className="col-span-6 md:col-span-4 gap-y-2">
+            <p>Lorem</p>
+            <p>Lorem</p>
+            <p>Lorem</p>
+            <p>Lorem</p>
+            <p>Lorem</p>
           </div>
+          <p className="col-span-12">
+            2022 Bali Luxury Leisure Design by Incognito Asia
+          </p>
         </div>
       </div>
     </>
